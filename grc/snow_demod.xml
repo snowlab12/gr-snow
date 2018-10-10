@@ -1,0 +1,46 @@
+<block>
+  <name>SNOW Demod</name>
+  <key>snow_demod</key>
+  <category>SNOW</category>
+  <import>import snow</import>
+  <make>snow.demod($enable_log, $threshold, $fft_size, $subcarriers)</make>
+  <param>
+    <name>Log Raw Data</name>
+    <key>enable_log</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+      <name>Enable</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>Disable</name>
+      <key>False</key>
+    </option>
+  </param>
+
+  <param>
+    <name>Threshold</name>
+    <key>threshold</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Fft_size</name>
+    <key>fft_size</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Subcarriers</name>
+    <key>subcarriers</key>
+    <value>[16, 32, 48]</value>
+    <type>int_vector</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
